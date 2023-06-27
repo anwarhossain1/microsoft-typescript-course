@@ -70,3 +70,12 @@ let nipon :ctoComeOwner = {
 }
 console.log(nipon.amount)
 
+//literal types
+
+type fixedType = 'yes' | 'no'
+
+let isActive: fixedType
+isActive = 'yes'
+isActive = 'no'
+isActive = 'both'
+

@@ -50,3 +50,23 @@ console.log(add('one', 'two'));
 console.log(add(1, 2));
 console.log(add('one', 2));
 
+//intersection
+
+interface Owner {
+    ownerShip : boolean,
+    amount:number
+}
+
+interface CTO{
+    responsibility : boolean
+}
+
+type ctoComeOwner = Owner & CTO
+
+let nipon :ctoComeOwner = {
+    ownerShip:true,
+    amount:50,
+    responsibility:true
+}
+console.log(nipon.amount)
+

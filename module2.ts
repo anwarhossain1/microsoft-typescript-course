@@ -31,3 +31,14 @@ interface Sundae extends IceCream {
     whippedCream?: boolean;
     instructions?: string;
 }
+
+//indexable types
+
+interface IceCreamArray {
+    [index: number]: string;
+}
+
+let myIceCream2: IceCreamArray;
+myIceCream2 = ['5', 'vanilla', 'strawberry'];
+let myStr: string = myIceCream2[2];
+console.log(myStr);

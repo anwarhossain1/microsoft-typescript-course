@@ -2,7 +2,9 @@
 //interface
 let myIceCream = {
     flavor: 'vanilla',
-    scoops: 2
+    scoops: 2,
+    sauce: 'caramel',
+    nuts: true
 };
 console.log(myIceCream.flavor);
 function tooManyScoops(dessert) {
@@ -13,4 +15,8 @@ function tooManyScoops(dessert) {
         return 'Your order will be ready soon!';
     }
 }
-console.log(tooManyScoops({ flavor: 'vanilla', scoops: 5 }));
+console.log(tooManyScoops({ flavor: 'vanilla', scoops: 5, sauce: 'caramel' }));
+let myIceCream2;
+myIceCream2 = ['5', 'vanilla', 'strawberry'];
+let myStr = myIceCream2[2];
+console.log(myStr);

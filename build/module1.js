@@ -3,8 +3,8 @@ function addNumbers(x, y) {
     return x + y;
 }
 console.log(addNumbers(3, 6));
-let a = 5;
-a = 10;
+let ab = 5;
+ab = 10;
 let b = 42;
 b = 5;
 b = 50;
@@ -42,3 +42,19 @@ function add(a, b) {
 console.log(add('one', 'two'));
 console.log(add(1, 2));
 console.log(add('one', 2));
+let nipon = {
+    ownerShip: true,
+    amount: 50,
+    responsibility: true
+};
+console.log(nipon.amount);
+let isActive;
+isActive = 'yes';
+isActive = 'no';
+//tuples
+let numbers = [];
+numbers = [1, 2];
+numbers = [52, 25];
+let numbersWithGeneric = [];
+numbersWithGeneric = [54, 254];
+let tuplesWithDiffTypes = [54, 'anwar'];

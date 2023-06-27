@@ -22,6 +22,15 @@ let num:any = 10
 num = 'string'
 num = 54
 
-let un: unknown = 10
-un = 'sp'
-console.log((un as string).toUpperCase())
+let unknown: unknown = 10
+unknown = true
+unknown = 'sp'
+unknown = 12
+
+if(typeof unknown==='string'){
+    console.log((unknown as string).toUpperCase())
+}
+else{
+    console.log('Error')
+}
+

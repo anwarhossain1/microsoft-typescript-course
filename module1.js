@@ -18,6 +18,12 @@ console.log(employeeStatus);
 var num = 10;
 num = 'string';
 num = 54;
-var un = 10;
-un = 'sp';
-console.log(un.toUpperCase());
+var unknown = 10;
+unknown = true;
+unknown = 'sp';
+if (typeof unknown === 'string') {
+    console.log(unknown.toUpperCase());
+}
+else {
+    console.log('Error');
+}

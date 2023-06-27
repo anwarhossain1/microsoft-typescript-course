@@ -17,3 +17,11 @@ enum ContractStatus {
 }
 let employeeStatus = ContractStatus.Temp
 console.log(employeeStatus)
+
+let num:any = 10
+num = 'string'
+num = 54
+
+let un: unknown = 10
+un = 'sp'
+console.log((un as string).toUpperCase())

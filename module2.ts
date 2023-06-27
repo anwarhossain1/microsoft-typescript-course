@@ -5,13 +5,15 @@ interface IceCream {
     scoops: number;
     instructions?:string
 }
-let myIceCream: IceCream = {
+let myIceCream: Sundae = {
     flavor: 'vanilla',
-    scoops: 2
+    scoops: 2,
+    sauce: 'caramel',
+    nuts: true
 }
 
 console.log(myIceCream.flavor);
-function tooManyScoops(dessert: IceCream) {
+function tooManyScoops(dessert: Sundae) {
     if (dessert.scoops >= 4) {
         return dessert.scoops + ' is too many scoops!';
     } else {
@@ -19,4 +21,13 @@ function tooManyScoops(dessert: IceCream) {
     }
 }
 
-console.log(tooManyScoops({flavor: 'vanilla', scoops: 5}));
+console.log(tooManyScoops({flavor: 'vanilla', scoops: 5, sauce: 'caramel'}));
+
+//interface extend
+
+interface Sundae extends IceCream {
+    sauce: 'chocolate' | 'caramel' | 'strawberry';
+    nuts?: boolean;
+    whippedCream?: boolean;
+    instructions?: string;
+}

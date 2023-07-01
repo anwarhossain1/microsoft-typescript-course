@@ -1,6 +1,14 @@
 //class practice
 
-class Car {
+interface Vehicle {
+    make: string;
+    color: string;
+    doors: number;
+    accelerate(speed: number): string;
+    brake(): string;
+    turn(direction: 'left' | 'right'): string;
+}
+class Car implements Vehicle{
     // Properties
     private _make: string;
     private _color: string;

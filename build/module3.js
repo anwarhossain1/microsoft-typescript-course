@@ -1,5 +1,7 @@
 "use strict";
 //class practice
+
+
 class Car {
     constructor(make, color, doors = 4) {
         this._make = make;

@@ -2,9 +2,9 @@
 
 class Car {
     // Properties
-    _make: string;
-    _color: string;
-    _doors: number;
+   private _make: string;
+    private _color: string;
+    private _doors: number;
 
     constructor(make: string, color: string, doors = 4) {
         this._make = make
@@ -55,9 +55,13 @@ class Car {
     }
 
 // This function performs work for the other method functions
-    worker(): string {
+    private  worker(): string {
         return this._make;
     }
 
 
 }
+
+let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
+console.log(myCar1.color);
+console.log(myCar1.brake());

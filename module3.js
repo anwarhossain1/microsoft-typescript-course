@@ -5,6 +5,7 @@ var Car = /** @class */ (function () {
         this._make = make;
         this._color = color;
         this._doors = doors;
+        Car.numberOfCars++;
     }
     Object.defineProperty(Car.prototype, "make", {
         // Accessors
@@ -56,8 +57,14 @@ var Car = /** @class */ (function () {
     Car.prototype.worker = function () {
         return this._make;
     };
+    Car.getNumberOfCars = function () {
+        return Car.numberOfCars;
+    };
+    Car.numberOfCars = 0; // New static property
     return Car;
 }());
 var myCar1 = new Car('Cool Car Company', 'blue', 2); // Instantiates the Car object with all parameters
+var myCar2 = new Car('Cool Car Company', 'red', 4);
 console.log(myCar1.color);
-console.log(myCar1._color);
+console.log(myCar1.brake());
+console.log(Car.getNumberOfCars());

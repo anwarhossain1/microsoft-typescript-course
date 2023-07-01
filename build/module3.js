@@ -5,6 +5,7 @@ class Car {
         this._make = make;
         this._color = color;
         this._doors = doors;
+        Car.numberOfCars++;
     }
     // Accessors
     get make() {
@@ -44,7 +45,13 @@ class Car {
     worker() {
         return this._make;
     }
+    static getNumberOfCars() {
+        return Car.numberOfCars;
+    }
 }
+Car.numberOfCars = 0; // New static property
 let myCar1 = new Car('Cool Car Company', 'blue', 2); // Instantiates the Car object with all parameters
+let myCar2 = new Car('Cool Car Company', 'red', 4);
 console.log(myCar1.color);
-console.log(myCar1._color);
+console.log(myCar1.brake());
+console.log(Car.getNumberOfCars());
